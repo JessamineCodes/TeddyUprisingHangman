@@ -1,6 +1,6 @@
 # 🧸 Love in the Time of the Teddy Bear Uprising 🧸
 ## What is this?
-A very simple hangman game with an even sillier storyline.
+A very simple hangman game with a very silly storyline.
 
 ## The story so far
 It's 2034, and it has been 10 long years since the bloody and terrible Teddy Bear Uprising. 🩸 🐻
