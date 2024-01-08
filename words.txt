@@ -3,3 +3,8 @@ teddy
 stuffed
 cuddly
 soft
+toy
+picnic
+hugs
+teatime
+squishy
