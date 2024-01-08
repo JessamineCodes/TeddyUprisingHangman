@@ -34,9 +34,6 @@ def get_player_input():
             guessed_letters.add(player_input)
             return player_input
 
-
-
-
 # Method for showing word to the player
 def build_guessed_word(target_word, guessed_letters):
     # create empty list to add letters and underscores to, which we can later join
@@ -161,13 +158,13 @@ def game_over():
     # game is over if user reaches max number of incorrect guesses
     if number_wrong_guesses == MAX_INCORRECT_GUESSES:
         draw_hanged_man(number_wrong_guesses)
-        print("Game over! A bear with a sack on his head pulls the lever and your lover meets a brutal but short end. You will be reunited in the next life!")
+        print(f"Game over! The word was '{target_word}'. \nA bear with a sack on his head pulls the lever and your lover meets a brutal but short end. You will be reunited in the next life!")
         return True
     # turn target word into a set object, which will automatically contain every unique letter from target word
     # compared this set to the set of guessed letters.
     # <= operator checks if every item in left-hand set is a member of right hand set.
     if set(target_word) <= guessed_letters:
-        print("VICTORY! The bears keep their word and begrudgingly let you go. You and your lover flee into the night together, to fight the teddy power another day.")
+        print(f"VICTORY! The word was '{target_word}'. \nThe bears keep their word and begrudgingly let you go. You and your lover flee into the night together, to fight the teddy power another day.")
         return True
     # otherwise game is not yet over so return false
     return False
@@ -185,12 +182,15 @@ if __name__ == "__main__":
     number_wrong_guesses = 0
 
     # game exposition
-    print("""It's 2034, and it has been 10 long years since the bloody and terrible Teddy Bear Uprising. 🩸 🧸
-          You and your lover have led the human resistance from the start, but yesterday your heist of the Stuffing Treasury went badly wrong and your partner in rebellion and life was captured. Your love is due to be hung to death this very day 💀
-          Droves of teddy bears have come to witness the execution. The oversized plaid bowtie noose has been prepared. The fake cups of tea have been poured. The picnics have been laid out.
-          But you know that teddy bears can't resist a game, so you challenge their leader, the Prime Cuddler, to hangman.
-          If you win, you and your lover go free. If they win, your lover will be executed, and you will turn yourself in.
-          So this one's for all the eye marbles.""")
+    print("""
+🧸 Love in the Time of the Teddy Bear Uprising 🧸
+It's 2034, and it has been 10 long years since the bloody and terrible Teddy Bear Uprising. 🩸 🐻
+You and your lover have led the human resistance from the start, but yesterday your heist of the Stuffing Treasury went badly wrong and your partner in rebellion and life was captured. Your love is due to be hung to death this very day 💀
+Droves of teddy bears have come to witness the execution. The oversized plaid bowtie noose has been prepared. The fake cups of tea have been poured. The picnics have been laid out. 🫖
+But you know that teddy bears can't resist a game, so you challenge their leader, the Prime Cuddler, to hangman. 💪
+If you win, you and your lover go free. If they win, your lover will be executed, and you will turn yourself in. ⛓️
+So this one's for all the eye marbles. Good luck!
+          """)
 
     # game loop
     while not game_over():
